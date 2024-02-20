@@ -53,6 +53,34 @@ export default function Home() {
       }
    }
 
+   const handleSubmit = async () => {
+      e.preventDefault();
+
+      try {
+         setLoading(true);
+         const response = await fetch('/api/sendForm/create', {
+            method: 'POST',
+            headers: {
+               'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+         });
+
+         if (response.ok) {
+            alert.success('Formulário enviado com sucesso');
+            setFormData({})
+            router.push('/contact')
+         } else {
+            alert.error('Ocorreu um erro ao enviar o formulário.');
+         }
+      } catch (error) {
+         console.error('Erro ao enviar formulário', error);
+         alert.error('Ocorreu um erro ao enviar o formulário.');
+      } finally {
+         setLoading(false);
+      }
+   };
+
    const codeAreas = [
       { label: 'Espanha', value: '+34' },
       { label: 'México', value: '+52' },
@@ -128,7 +156,7 @@ export default function Home() {
                </Box>
             </Box>
             <Box sx={{ display: 'flex', marginTop: 10, justifyContent: 'center', alignItems: 'center' }}>
-               <FormContainer onSubmit={() => router.push('/contact')}>
+               <FormContainer onSubmit={(e) => handleSubmit(e)}>
                   <FormField>
                      <FormLabel>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: .5 }}>
@@ -252,7 +280,7 @@ export default function Home() {
                      })}
                      {formData?.contactForm === 'Outro' && (
                         <FormField>
-                           <FormInput type="text" placeholder="Qual?" name="anotherFormContact" onChange={handleInputChange} />
+                           <FormInput type="text" placeholder="Qual?" name="obsContactForm" onChange={handleInputChange} />
                         </FormField>
                      )}
                   </FormField>
@@ -269,7 +297,7 @@ export default function Home() {
                   }} onClick={() => router.push('/contact')}>
                      <button type="submit" style={{
                         appearance: 'none', textDecoration: 'none', backgroundColor: '#1E90FF', border: 'none'
-                     }} onSubmit={() => router.push('/contact')}>
+                     }} onSubmit={(e) => handleSubmit(e)}>
                         <Text style={{ color: '#fff', marginLeft: 10 }}>
                            Enviar
                         </Text>
