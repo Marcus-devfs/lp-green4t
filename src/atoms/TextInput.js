@@ -11,7 +11,7 @@ export const TextInput = (props) => {
          {...props}
          
          InputProps={{
-            sx: { borderRadius: 2, fontSize: { xs: '12px', xm: '15px', md: '15px', lg: '15px' }, fontFamily: 'InterRegular', color: Colors.darkBlueText, ...InputProps?.style },
+            sx: { borderRadius: 2, fontSize: { xs: '12px', xm: '15px', md: '15px', lg: '15px' }, fontFamily: 'InterRegular', color: '#000', ...InputProps?.style },
             startAdornment: props.type === "search"
                ? (
                   <InputAdornment position="start">

@@ -94,64 +94,64 @@ a {
 }
 
 @font-face {
-   font-family: 'InterThin';
-   src: url('../../assets/fonts/Inter-Thin.ttf');
+   font-family: 'PoppinsThin';
+   src: url('../../assets/fonts/Poppins-Thin.ttf');
    font-weight: 100;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'InterExtraLight';
-   src: url('../../assets/fonts/Inter-ExtraLight.ttf');
+   font-family: 'PoppinsExtraLight';
+   src: url('../../assets/fonts/Poppins-ExtraLight.ttf');
    font-weight: 200;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'InterLight';
-   src: url('../../assets/fonts/Inter-Light.ttf');
+   font-family: 'PoppinsLight';
+   src: url('../../assets/fonts/Poppins-Light.ttf');
    font-weight: 300;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'InterRegular';
-   src: url('../../assets/fonts/Inter-Regular.ttf');
+   font-family: 'PoppinsRegular';
+   src: url('../../assets/fonts/Poppins-Regular.ttf');
    font-weight: 400;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'InterMedium';
-   src: url('../../assets/fonts/Inter-Medium.ttf');
+   font-family: 'PoppinsMedium';
+   src: url('../../assets/fonts/Poppins-Medium.ttf');
    font-weight: 500;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'InterSemiBold';
-   src: url('../../assets/fonts/Inter-SemiBold.ttf');
-   font-weight: 100;
+   font-family: 'PoppinsSemiBold';
+   src: url('../../assets/fonts/Poppins-SemiBold.ttf');
+   font-weight: 600;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'InterBold';
-   src: url('../../assets/fonts/Inter-Bold.ttf');
+   font-family: 'PoppinsBold';
+   src: url('../../assets/fonts/Poppins-Bold.ttf');
    font-weight: 700;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'InterExtraBold';
-   src: url('../../assets/fonts/Inter-ExtraBold.ttf');
+   font-family: 'PoppinsExtraBold';
+   src: url('../../assets/fonts/Poppins-ExtraBold.ttf');
    font-weight: 800;
    font-style: normal;
 }
 
 @font-face {
-   font-family: 'InterBlack';
-   src: url('../../assets/fonts/Inter-Black.ttf');
+   font-family: 'PoppinsBlack';
+   src: url('../../assets/fonts/Poppins-Black.ttf');
    font-weight: 900;
    font-style: normal;
 }

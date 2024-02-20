@@ -18,15 +18,15 @@ export const Text = (props) => {
       <Typography
          {...props}
          sx={{
-            fontFamily: 'InterRegular',
-            fontSize: {xs:`12px`, xm: `15px`, md: `15px`,lg: `15px`},
-            color: Colors.darkBlueText,
-            ...(light && { fontFamily: 'InterLight' }),
-            ...(bold && { fontFamily: 'InterSemiBold' }),
+            fontFamily: 'PoppinsRegular',
+            fontSize: {xs:`12px`, xm: `15px`, md: `15px`,lg: `16px`},
+            color: '#000',
+            ...(light && { fontFamily: 'PoppinsLight' }),
+            ...(bold && { fontFamily: 'PoppinsSemiBold' }),
             ...(small && { fontSize: {xs:`10px`, xm: `13px`, md: `13px`,lg: `13px`} }),
-            ...(large && { fontSize: {xs:`15px`, xm: `18px`, md: `18px`,lg: `18px`} }),
-            ...(title && { fontSize: {xs:`18px`, xm: `22px`, md: `22px`,lg: `22px`} }),
-            ...(veryLarge && { fontSize: {xs:`20px`, xm: `25px`, md: `30px`,lg: `35px`} }),
+            ...(large && { fontSize: {xs:`12px`, xm: `18px`, md: `18px`,lg: `20px`} }),
+            ...(title && { fontSize: {xs:`18px`, xm: `22px`, md: `22px`,lg: `25px`} }),
+            ...(veryLarge && { fontSize: {xs:`15px`, xm: `25px`, md: `30px`,lg: `40px`} }),
             ...style
          }}
       >
