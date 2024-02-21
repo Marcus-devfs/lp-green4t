@@ -21,7 +21,7 @@ const getColors = (alertType) => {
       textColor: '#91604e',
    }
    if (alertType === 'info') return {
-      progressBarColor: Colors.yellow,
+      progressBarColor: 'yellow',
       // borderColor: '#71644844',
       progressBarBackgroundColor: '#716448',
       textColor: '#716448',
@@ -50,8 +50,8 @@ export const Alert = (props) => {
             <Box sx={styles.alertContainer}>
                <Box sx={{
                   ...styles.alertContent,
-                  backgroundColor: colorPalette.secondary,
-                  border: `1px solid ${colorPalette.primary}`,
+                  backgroundColor: '#fff',
+                  border: `1px solid ${'#fff'}`,
                }}>
                   {props.type !== 'info' && <Box sx={{ ...styles.progressBarContainer, backgroundColor: theme.progressBarBackgroundColor, }}>
                      <Box sx={{
@@ -64,16 +64,16 @@ export const Alert = (props) => {
                   <Box>
                      {props.type === 'success' && <CheckCircleIcon style={{ color: 'green', fontSize: 30 }} />}
                      {props.type === 'error' && <CancelIcon style={{ color: 'red', fontSize: 30 }} />}
-                     {props.type === 'info' && <InfoIcon style={{ color: Colors.yellow, fontSize: 30 }} />}
+                     {props.type === 'info' && <InfoIcon style={{ color: 'yellow', fontSize: 30 }} />}
                   </Box>
                   <Box sx={styles.innerAlertContent}>
                      <Box sx={styles.alertTitleContainer}>
-                        <Text bold='true' style={{ color: colorPalette.textColor }}>
+                        <Text bold='true' style={{ color: '#000' }}>
                            {props?.title}
                         </Text>
                      </Box>
                      <Box sx={styles.messageContainer}>
-                        <Text small style={{ color: colorPalette.textColor }}>
+                        <Text small style={{ color: '#000' }}>
                            {props?.message}
                         </Text>
                      </Box>
