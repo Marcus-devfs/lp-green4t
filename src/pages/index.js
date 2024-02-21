@@ -54,21 +54,30 @@ export default function Home() {
    }
 
    const handleSubmit = async () => {
-      e.preventDefault();
 
       try {
          setLoading(true);
-         const response = await fetch('/api/sendForm/create', {
+         const response = await fetch(`api/sendForm`, {
             method: 'POST',
             headers: {
-               'Content-Type': 'application/json',
+              'Content-Type': 'application/json',
             },
-            body: JSON.stringify(formData),
-         });
+            body: JSON.stringify({ formData }),
+          });
 
          if (response.ok) {
             alert.success('Formulário enviado com sucesso');
-            setFormData({})
+            setFormData({
+               name: '',
+               codeArea: '',
+               phoneNumber: '',
+               email: '',
+               responsability: '',
+               state: '',
+               company: '',
+               feedback: '',
+               contactForm: '',
+            })
             router.push('/contact')
          } else {
             alert.error('Ocorreu um erro ao enviar o formulário.');
@@ -294,10 +303,10 @@ export default function Home() {
                         cursor: 'pointer',
                         transform: 'scale(1.1, 1.1)'
                      }
-                  }} onClick={() => router.push('/contact')}>
+                  }} onClick={() => handleSubmit()}>
                      <button type="submit" style={{
                         appearance: 'none', textDecoration: 'none', backgroundColor: '#1E90FF', border: 'none'
-                     }} onSubmit={(e) => handleSubmit(e)}>
+                     }} onSubmit={() => handleSubmit()}>
                         <Text style={{ color: '#fff', marginLeft: 10 }}>
                            Enviar
                         </Text>
