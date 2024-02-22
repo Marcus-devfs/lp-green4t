@@ -5,13 +5,13 @@ import { Box, TextInput } from '../../atoms';
 export const FormInput = ({ type, name, value, onChange, placeholder, children, rows, checked }) => {
   if (type === 'select') {
     return (
-      <div style={{ position: 'relative', display: 'inline-block', backgroundColor: '#f5f5f8', }}>
+      <div style={{ position: 'relative', display: 'inline-block', backgroundColor: '#7C95B10D', }}>
         <select
           name={name}
           value={value}
           onChange={(e) => onChange(name, e.target.value)}
           style={{
-            backgroundColor: '#f5f5f8',
+            backgroundColor: '#7C95B10D',
             width: '100%',
             color: '#000',
             fontSize: '13px',
@@ -51,7 +51,7 @@ export const FormInput = ({ type, name, value, onChange, placeholder, children, 
         onChange={(e) => onChange(name, e.target.value)}
         placeholder={placeholder}
         style={{
-          backgroundColor: '#f5f5f8',
+          backgroundColor: '#7C95B10D',
           color: '#000',
           fontSize: '13px',
           border: 'none',
@@ -75,7 +75,7 @@ export const FormInput = ({ type, name, value, onChange, placeholder, children, 
           width: 25,
           height: 25,
           padding: '5px',
-          backgroundColor: '#f5f5f8',
+          backgroundColor: '#7C95B10D',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -94,7 +94,7 @@ export const FormInput = ({ type, name, value, onChange, placeholder, children, 
     <input type="text" name={name} value={value} onChange={(e) => onChange(name, e.target.value)}
       placeholder={placeholder}
       style={{
-        backgroundColor: '#f5f5f8',
+        backgroundColor: '#7C95B10D',
         color: '#000',
         fontSize: '13px',
         width: '100%',

@@ -13,12 +13,12 @@ export const Footer = ({ menuItems = [] }) => {
 
     return (
         <Box sx={styles.container}>
-            <Box sx={{ display: 'flex', gap: 4, flexDirection: 'column', alignItems: 'center' }}>
+            <Box sx={{ display: 'flex', gap: 2, flexDirection: 'column', alignItems: 'center', marginBottom : 1 }}>
 
                 < Box sx={{
                     ...styles.menuIcon,
-                    width: 200, height: 80, aspectRatio: '1/1',
-                    backgroundImage: `url('/icons/logo-green.svg')`,
+                    width: { xs: 220, xm: 40, md: 300, lg: '337px' }, height: { xs: 200, xm: 40, md: 80, lg: '221px' },
+                    backgroundImage: `url('/icons/logo_green_slogan.png')`,
                     transition: '.3s',
                 }} />
 
@@ -49,7 +49,7 @@ export const Footer = ({ menuItems = [] }) => {
 const styles = {
     container: {
         position: 'absolute',
-        height: { xs: `60%`, xm: '50%', md: '50%', lg: '40%' },
+        height: { xs: `60%`, xm: '50%', md: '50%', lg: '368px' },
         width: '100%',
         // backgroundColor: '#00A86B',
         backgroundImage: 'linear-gradient(135deg, #00874D 0%, #00CC66 100%)',
@@ -69,7 +69,6 @@ const styles = {
         backgroundSize: 'contain',
         width: 30,
         height: 30,
-        marginTop: 1,
         marginRight: 1.5,
         "&:hover": {
             cursor: 'pointer', opacity: 0.8

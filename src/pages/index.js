@@ -60,10 +60,10 @@ export default function Home() {
          const response = await fetch(`api/sendForm`, {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
+               'Content-Type': 'application/json',
             },
             body: JSON.stringify({ formData }),
-          });
+         });
 
          if (response.ok) {
             alert.success('Formulário enviado com sucesso');
@@ -121,12 +121,12 @@ export default function Home() {
          </Head>
 
          <Box fullWidth sx={styles.container}>
-            <Box fullWidth sx={{ ...styles.containerSection }}>
-               <Box sx={{ display: 'flex', width: '100%', height: { xs: 'auto', xm: 480, md: 480, lg: 735, xl: 968 }, }}>
+            <Box fullWidth sx={{ ...styles.containerSection, }}>
+               <Box sx={{ display: 'flex', width: '100%', height: { xs: '550px', xm: 480, md: 480, lg: 780, xl: '966px' }, }}>
                   <Box sx={{
                      position: 'absolute',
                      width: '100%',
-                     height: { xs: 'auto', xm: 480, md: 480, lg: '100%' },
+                     height: { xs: 'auto', xm: 480, md: 480, lg: 700, xl: '900px' },
                      zIndex: 999,
                      display: 'flex',
                      alignItems: 'center',
@@ -142,12 +142,12 @@ export default function Home() {
                            padding: { xs: '10px 80px', xm: '10px 30px', md: '0px 300px', lg: '0px 300px', xl: '0px 300px' },
                            maxWidth: { xs: '100%', xm: '100%', md: '100%', lg: '100%' }
                         }}>
-                        <Box sx={{ display: 'flex', marginBottom: { xs: 1, xm: 1, md: 8, lg: 8 }, }}>
+                        <Box sx={{ display: 'flex', marginBottom: { xs: 1, xm: 1, md: 8, lg: 0 }, }}>
                            < Box sx={{
                               ...styles.menuIcon,
-                              width: { xs: 80, xm: 40, md: 300, lg: 300 }, height: { xs: 40, xm: 40, md: 80, lg: 80 },
+                              width: { xs: 120, xm: 40, md: 300, lg: '411px' }, height: { xs: 100, xm: 40, md: 80, lg: '270px' },
                               aspectRatio: '1/1',
-                              backgroundImage: `url('/icons/logo-green.svg')`,
+                              backgroundImage: `url('/icons/logo_green_slogan.png')`,
                               transition: '.3s',
                            }} />
                         </Box>
@@ -164,7 +164,7 @@ export default function Home() {
                   <Banner />
                </Box>
             </Box>
-            <Box sx={{ display: 'flex', marginTop: 10, justifyContent: 'center', alignItems: 'center' }}>
+            <Box sx={{ display: 'flex', marginTop: 20, justifyContent: 'center', alignItems: 'center' }}>
                <FormContainer onSubmit={(e) => handleSubmit(e)}>
                   <FormField>
                      <FormLabel>
@@ -295,7 +295,7 @@ export default function Home() {
                   </FormField>
 
                   <Box sx={{
-                     display: 'flex', gap: 1, backgroundColor: '#1E90FF', justifyContent: 'space-between',
+                     display: 'flex', gap: 1, backgroundColor: '#27A2C3', justifyContent: 'space-between',
                      padding: '0px 0px 0px 50px',
                      transition: '.3s',
                      '&:hover': {
@@ -305,14 +305,14 @@ export default function Home() {
                      }
                   }} onClick={() => handleSubmit()}>
                      <button type="submit" style={{
-                        appearance: 'none', textDecoration: 'none', backgroundColor: '#1E90FF', border: 'none'
+                        appearance: 'none', textDecoration: 'none', backgroundColor: '#27A2C3', border: 'none'
                      }} onSubmit={() => handleSubmit()}>
                         <Text style={{ color: '#fff', marginLeft: 10 }}>
                            Enviar
                         </Text>
                      </button>
                      <Box sx={{
-                        backgroundColor: '#4169E1', width: '120px', height: '70px', display: 'flex', alignItems: 'center',
+                        backgroundColor: '#017BA5', width: '120px', height: '70px', display: 'flex', alignItems: 'center',
                         justifyContent: 'center'
                      }}>
                         <Text light style={{ color: '#fff', fontSize: 50 }}>{'>'}</Text>
@@ -340,7 +340,7 @@ const styles = {
       marginTop: { xs: 0, xm: 10, md: 10, lg: 0 },
       left: 0,
       width: '100%',
-      height: 'auto'
+      height: { xs: '550px', xm: 'auto', md: 'auto', lg: 700, xl: '966px' },
    },
    textHeader: {
       color: '#fff'

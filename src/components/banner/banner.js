@@ -11,7 +11,8 @@ export const Banner = ({ img = "" }) => {
                 alignItems: 'center',
                 flex: 1,
                 gap: 3,
-                marginTop: { xs: `0px`, xm: '0px', md: '0px', lg: '0px' }
+                marginTop: { xs: `0px`, xm: '0px', md: '0px', lg: '0px' },
+                height: { xs: '550px', xm: 'auto', md: 'auto', lg: 780, xl: '966px' },
             }}>
                 <Box sx={{
                     ...styles.imageHeader,
@@ -38,6 +39,6 @@ const styles = {
         backgroundPosition: 'center center',
         backgroundImage: `url('/background/background-image.jpeg')`,
         width: { xs: '100%', xm: '90%', md: '90%', lg: '100%' },
-        height: { xs: '400px', xm: '90%', md: '90%', lg: '100%' }
+        height: { xs: '550px', xm: '90%', lg: 780, xl: '966px' }
     },
 }

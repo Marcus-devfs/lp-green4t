@@ -43,9 +43,9 @@ export default function Contacts() {
                                 <Box sx={{ display: 'flex', }}>
                                     < Box sx={{
                                         ...styles.menuIcon,
-                                        width: { xs: 80, xm: 40, md: 300, lg: 300 }, height: { xs: 40, xm: 40, md: 80, lg: 200 },
+                                        width: { xs: 120, xm: 40, md: 300, lg: '411px' }, height: { xs: 100, xm: 40, md: 80, lg: '270px' },
                                         aspectRatio: '1/1',
-                                        backgroundImage: `url('/icons/logo-green.svg')`,
+                                        backgroundImage: `url('/icons/logo_green_slogan.png')`,
                                         transition: '.3s',
                                     }} />
                                 </Box>

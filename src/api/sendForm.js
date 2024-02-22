@@ -9,9 +9,7 @@ export default cors(async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       const { formData } = req.body;
-      const response = await axios.post(`http://localhost:3000/lp/formContact/create`, { formData });
-      console.log(response.data);
-
+      await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/lp/formContact/create`, { formData });
       res.status(200).json({ success: true, message: 'ok' });
     } catch (error) {
       console.error(error);
